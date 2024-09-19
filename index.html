@@ -18,48 +18,89 @@
                 <div class="stats shadow">
                     <div class="stat">
                       <div class="stat-title  text-3xl">Account Balance</div>
-                      <div class="stat-value text-center"><span>45000</span>$</div>
+                      <div  class="stat-value text-center"><span id="balance-account">45000</span>$</div>
                       
                     </div>
                   </div>
                   <div class="divider"></div>
                  <!-- features  start-->
                  <div>
-                    <button class="btn btn-md">Add Money</button>
-                    <button class="btn btn-md">CashOut</button>
-                    <button class="btn btn-md">Transfer Money</button>
+                    <button id="AddMoney-form" class="btn btn-md">Add Money</button>
+                    <button id="cashOut-form" class="btn btn-md">CashOut</button>
+                    <button id="transferMoney-form" class="btn btn-md">Transfer Money</button>
                  </div>
                  <!-- features  ends-->
                  <div class="divider"></div>
                  <!-- add money from start -->
-                 <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                 <div id="addMoney-section" class="card hidden bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                     <form class="card-body">
                       <div class="form-control">
                         <label class="label">
-                          <span class="label-text">Email</span>
+                          <span class="label-text font-bold"> Add Money Amount</span>
                         </label>
-                        <input type="email" placeholder="email" class="input input-bordered" required />
+                        <input id="addMoney-input" type="text" 
+                        placeholder="your amount" class="input input-bordered" required />
                       </div>
                       <div class="form-control">
                         <label class="label">
-                          <span class="label-text">Password</span>
+                          <span class="label-text">Pin Number</span>
                         </label>
-                        <input type="password" placeholder="password" class="input input-bordered" required />
-                        <label class="label">
-                          <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
-                        </label>
+                        <input id="input-pin" type="password" autocomplete="off"
+                        placeholder="pin number" class="input input-bordered" required />
+                        
                       </div>
                       <div class="form-control mt-6">
-                        <button class="btn btn-primary">Login</button>
+                        <button id="addMoney-btn" class="btn btn-primary">Add Money</button>
                       </div>
                     </form>
                   </div>
                  <!-- add money from ends -->
-            </div>
+
+                 <!-- cashOut form start -->
+                 <div id="cashOut-section" class="card hidden bg-base-100 w-full
+                  max-w-sm shrink-0 shadow-2xl">
+                  <form class="card-body">
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text font-bold"> CashOut Amount</span>
+                      </label>
+                      <input id="cashOut-input" type="text" 
+                      placeholder="your amount" class="input input-bordered" required />
+                    </div>
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text">Pin Number</span>
+                      </label>
+                      <input id="cashOut-pin" type="password" autocomplete="off"
+                      placeholder="pin number" class="input input-bordered" required />
+                      
+                    </div>
+                    <div class="form-control mt-6">
+                      <button id="cashOut-btn" class="btn btn-primary">CashOut Money</button>
+                    </div>
+                  </form>
+                </div>
+                 <!-- cashOut form ends -->
+
+                 <!-- transaction start -->
+                    <div id="transaction-section">
+                      <h2 class="text-5xl text-center">Transaction</h2>
+                      <div id="transaction-container" class="space-y-3 p-3">
+
+                      </div>
+                    </div>
+                 <!-- transaction ends -->
+
+                </div>
+                
             </div>
           </div>
     </main>
     
-    <script src="js/addMoney.js"></script>
+    <script src="js/utilities2.js"></script>
+    <script src="js/addMoney2.js"></script>
+    <script src="js/cashOut.js"></script>
+    <script src="js/features.js"></script>
+    
 </body>
 </html>
